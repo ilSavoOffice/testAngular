@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title></title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/jquery.fileDownload.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#download").click(
+        function(e) {   
+          e.preventDefault();
+
+          //open download link in new page
+          window.open( $(this).attr("href") );
+
+          //redirect current page to success page
+          window.location.href = "index2.html";
+          window.focus();
+        }
+      );  
+
+      $(".test").on("click", function(){
+        $(this).closest("tr").remove();
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- <a id="download" href="files/wininjob.sql.zip">ciao</a> -->
+  <table>
+    <tr>
+      <td><span class="test">test 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="test">test 2</span></td>
+    </tr>
+    <tr>
+      <td><span class="test">test 3</span></td>
+    </tr>
+    <tr>
+      <td><span class="test">test 4</span></td>
+    </tr>
+  </table>
+</body>
+</html>
